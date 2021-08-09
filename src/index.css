@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face {
+  font-family: 'Khula-Bold';
+  src: local('Khula'),
+  url('./fonts/Khula/Khula-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Khula-ExtraBold';
+  src: local('Khula'),
+  url('./fonts/Khula/Khula-ExtraBold.ttf') format('truetype');
+  font-weight: bolder;
+}
+@font-face {
+  font-family: 'Khula-Regular';
+  src: local('Khula'),
+  url('./fonts/Khula/Khula-Regular.ttf') format('truetype');
+}
