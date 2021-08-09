@@ -67,7 +67,7 @@ const ImageBox = ({ images, style, website }) => {
     <div style={style} className={`col-12 col-xl-6 imageBox`} title="Click to see the site">
         <Arrow
           arrowClick={handleLeftArrowClick}
-          direction={<FaArrowAltCircleLeft />}
+          direction={<FaArrowAltCircleLeft color="white" />}
           style={{left: 0}} 
         />
         <a className="websiteLink" rel="noreferrer" href={website} target="_blank">
@@ -75,7 +75,7 @@ const ImageBox = ({ images, style, website }) => {
         </a>
         <Arrow 
           arrowClick={handleRightArrowClick}
-          direction={<FaArrowAltCircleRight />}
+          direction={<FaArrowAltCircleRight color="white" />}
           style={{right: 0}}
          />
     </div>
