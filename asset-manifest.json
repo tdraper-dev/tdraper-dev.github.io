@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e95f93ec.chunk.css",
+    "main.js": "/static/js/main.5a782d6d.chunk.js",
+    "main.js.map": "/static/js/main.5a782d6d.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.80e83313.js",
+    "runtime-main.js.map": "/static/js/runtime-main.80e83313.js.map",
+    "static/css/2.983f79de.chunk.css": "/static/css/2.983f79de.chunk.css",
+    "static/js/2.f4e38220.chunk.js": "/static/js/2.f4e38220.chunk.js",
+    "static/js/2.f4e38220.chunk.js.map": "/static/js/2.f4e38220.chunk.js.map",
+    "static/js/3.15a77a66.chunk.js": "/static/js/3.15a77a66.chunk.js",
+    "static/js/3.15a77a66.chunk.js.map": "/static/js/3.15a77a66.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.983f79de.chunk.css.map": "/static/css/2.983f79de.chunk.css.map",
+    "static/css/main.e95f93ec.chunk.css.map": "/static/css/main.e95f93ec.chunk.css.map",
+    "static/js/2.f4e38220.chunk.js.LICENSE.txt": "/static/js/2.f4e38220.chunk.js.LICENSE.txt",
+    "static/media/CurrencyConverterDisplay(resized).3560a60c.png": "/static/media/CurrencyConverterDisplay(resized).3560a60c.png",
+    "static/media/CurrencyConverterHome(resized).3ae8198a.png": "/static/media/CurrencyConverterHome(resized).3ae8198a.png",
+    "static/media/CurrencyConverterInfo(resized).6f2eb8a8.png": "/static/media/CurrencyConverterInfo(resized).6f2eb8a8.png",
+    "static/media/App.css": "/static/media/GrutchShaded.a1ddcad0.ttf",
+    "static/media/DawdActive(resized).c4b1ae25.png": "/static/media/DawdActive(resized).c4b1ae25.png",
+    "static/media/DawdComplete(resized).b4bb24c6.png": "/static/media/DawdComplete(resized).b4bb24c6.png",
+    "static/media/DawdHome(resized).4638fc76.png": "/static/media/DawdHome(resized).4638fc76.png",
+    "static/media/DungeonMapDashboard(resized).2f680e47.png": "/static/media/DungeonMapDashboard(resized).2f680e47.png",
+    "static/media/DungeonMapGameBoard(resized).bf74850f.png": "/static/media/DungeonMapGameBoard(resized).bf74850f.png",
+    "static/media/DungeonMapLogin(resized).301cb910.png": "/static/media/DungeonMapLogin(resized).301cb910.png",
+    "static/media/index.css": "/static/media/Khula-Regular.8b8c56dc.ttf",
+    "static/media/logo.6ce24c58.svg": "/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.80e83313.js",
+    "static/css/2.983f79de.chunk.css",
+    "static/js/2.f4e38220.chunk.js",
+    "static/css/main.e95f93ec.chunk.css",
+    "static/js/main.5a782d6d.chunk.js"
+  ]
+}
