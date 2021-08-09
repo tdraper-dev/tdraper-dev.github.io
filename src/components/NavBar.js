@@ -15,7 +15,7 @@ function Navbar() {
     return (
         <nav className="fixed-top navbar navbar-expand-lg navbar-dark">
             <Link to="/" className='navbar-brand'>
-                <span className="otherTitleSpecial" style={{color: 'white'}}>Draper</span>
+                <span className="otherTitleSpecial" style={{color: 'white'}}>tDraper</span>
                 <div className="period" style={{color: 'rgba(226, 78, 66)', display: 'inline-block'}}>.</div>
                 <div className="titleSpecial" style={{color: 'rgb(233, 128, 0)'}}>dev</div></Link>
             <button 
