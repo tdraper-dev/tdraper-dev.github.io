@@ -231,6 +231,7 @@
 }
 .iconTitle {
   font-family: Khula-ExtraBold;
+  text-align: center;
 }
 .aboutTextBox {
   text-align: left;
@@ -325,7 +326,8 @@
 @media(max-width: 991px) {
   .projectsRow,
   .aboutMeRow,
-  .blogRow {
+  .blogRow,
+  .contactRow {
     margin-top: 50px;
   }
 }
@@ -376,13 +378,6 @@
   font-size: 35px;
   transition: 300ms;
 }
-/*
-.arrowBox:hover {
-  transition: 300ms;
-  background-color: rgba(203, 203, 203);
-  color: white
-}
-*/
 
 .textBox {
   position: relative;
@@ -579,6 +574,65 @@
   color:rgb(226, 78, 66);
 }
 
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
+/*----------------------------------------- CONTACT PAGE STYLINGS --------------------------------------------------------------------- */
+
+.contactRow {
+  justify-content: center;
+}
+
+.emailForm {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  box-shadow: 5px 10px 8px rgb(0 0 0 / 50%);
+  padding: 30px;
+  background-color:rgb(0, 143, 149);
+  border-radius: 15px;
+}
+.formLabel {
+  font-family:Khula-Regular;
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+}
+.emailInput {
+  width: fit-content;
+  border: 2px solid grey;
+}
+.emailInput:active {
+  outline: none;
+}
+.contentArea {
+  min-height: 300px;
+  border: 2px solid grey;
+}
+.accent {
+  color:rgb(226, 78, 66);
+  padding-left: 5px;
+}
+.formSubmitButton {
+  width: fit-content;
+  align-self: center;
+  outline: none;
+  border: none;
+  background-color: rgb(233, 128, 0);
+  font-size: 30px;
+  width: fit-content;
+  margin-top: auto;
+  border-radius: 15px;
+  padding: 5px;
+  padding-top: 7px;
+  font-weight: 500;
+  font-family: Khula-Regular;
+  color: white;
+  box-shadow: 5px 10px 8px rgb(0 0 0 / 50%);
+  transition: 300ms;
+}
+.formSubmitButton:hover {
+  transform:scaleY(125%) scaleX(125%);
+}
 
 
 

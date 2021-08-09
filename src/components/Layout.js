@@ -10,6 +10,7 @@ import Blog from './Blog'
 import Footer from './Footer'
 import About from './AboutMe'
 import Projects from './Projects'
+import Contact from './Contact'
 
 function Layout() {
     return (
@@ -20,7 +21,7 @@ function Layout() {
                 <Route path="/About" component={About} />
                 <Route path="/Projects" component={Projects} />
                 <Route path="/Blog" component={Blog} />
-                <Route path="/Contact" component={Home} />
+                <Route path="/Contact" component={Contact} />
                 <Route path="/" component={Home} />
             </Switch>
         </div>
