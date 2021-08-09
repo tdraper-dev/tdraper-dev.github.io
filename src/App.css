@@ -409,6 +409,7 @@
   font-family: Khula-Regular;
   color: white;
   box-shadow: 5px 10px 8px rgb(0 0 0 / 50%);
+  transition: 300ms;
 }
 @media(min-width: 1400px) {
   .learnMoreButton {
@@ -433,6 +434,11 @@
   .projectBlurb {
     padding-top: 10px;
   }
+}
+
+.learnMoreButton:hover {
+  transition: 300ms;
+  transform:scaleY(120%) scaleX(120%);
 }
 .keyWordsBox {
   display: flex;
@@ -565,6 +571,10 @@
 .textFlavor {
   color:rgb(226, 78, 66);
   font-weight: 500;
+  text-decoration: none;
+}
+.textFlavor:hover {
+  color:rgb(226, 78, 66);
 }
 
 
