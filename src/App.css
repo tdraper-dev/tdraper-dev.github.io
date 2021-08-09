@@ -136,6 +136,9 @@
   animation-fill-mode: forwards;
   font-size: 34px;
 }
+.t-letter {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
 .titleSpecial {
   display: inline-block;
