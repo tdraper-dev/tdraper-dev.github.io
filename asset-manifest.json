@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/tdraper.dev/static/css/main.9827c7f0.chunk.css",
-    "main.js": "/tdraper.dev/static/js/main.227ad380.chunk.js",
-    "main.js.map": "/tdraper.dev/static/js/main.227ad380.chunk.js.map",
+    "main.css": "/tdraper.dev/static/css/main.bbe8284c.chunk.css",
+    "main.js": "/tdraper.dev/static/js/main.13e58935.chunk.js",
+    "main.js.map": "/tdraper.dev/static/js/main.13e58935.chunk.js.map",
     "runtime-main.js": "/tdraper.dev/static/js/runtime-main.63688079.js",
     "runtime-main.js.map": "/tdraper.dev/static/js/runtime-main.63688079.js.map",
     "static/css/2.983f79de.chunk.css": "/tdraper.dev/static/css/2.983f79de.chunk.css",
-    "static/js/2.f4e38220.chunk.js": "/tdraper.dev/static/js/2.f4e38220.chunk.js",
-    "static/js/2.f4e38220.chunk.js.map": "/tdraper.dev/static/js/2.f4e38220.chunk.js.map",
+    "static/js/2.89c6d094.chunk.js": "/tdraper.dev/static/js/2.89c6d094.chunk.js",
+    "static/js/2.89c6d094.chunk.js.map": "/tdraper.dev/static/js/2.89c6d094.chunk.js.map",
     "static/js/3.15a77a66.chunk.js": "/tdraper.dev/static/js/3.15a77a66.chunk.js",
     "static/js/3.15a77a66.chunk.js.map": "/tdraper.dev/static/js/3.15a77a66.chunk.js.map",
     "index.html": "/tdraper.dev/index.html",
     "static/css/2.983f79de.chunk.css.map": "/tdraper.dev/static/css/2.983f79de.chunk.css.map",
-    "static/css/main.9827c7f0.chunk.css.map": "/tdraper.dev/static/css/main.9827c7f0.chunk.css.map",
-    "static/js/2.f4e38220.chunk.js.LICENSE.txt": "/tdraper.dev/static/js/2.f4e38220.chunk.js.LICENSE.txt",
+    "static/css/main.bbe8284c.chunk.css.map": "/tdraper.dev/static/css/main.bbe8284c.chunk.css.map",
+    "static/js/2.89c6d094.chunk.js.LICENSE.txt": "/tdraper.dev/static/js/2.89c6d094.chunk.js.LICENSE.txt",
     "static/media/CurrencyConverterDisplay(resized).3560a60c.png": "/tdraper.dev/static/media/CurrencyConverterDisplay(resized).3560a60c.png",
     "static/media/CurrencyConverterHome(resized).3ae8198a.png": "/tdraper.dev/static/media/CurrencyConverterHome(resized).3ae8198a.png",
     "static/media/CurrencyConverterInfo(resized).6f2eb8a8.png": "/tdraper.dev/static/media/CurrencyConverterInfo(resized).6f2eb8a8.png",
@@ -30,8 +30,8 @@
   "entrypoints": [
     "static/js/runtime-main.63688079.js",
     "static/css/2.983f79de.chunk.css",
-    "static/js/2.f4e38220.chunk.js",
-    "static/css/main.9827c7f0.chunk.css",
-    "static/js/main.227ad380.chunk.js"
+    "static/js/2.89c6d094.chunk.js",
+    "static/css/main.bbe8284c.chunk.css",
+    "static/js/main.13e58935.chunk.js"
   ]
 }
