@@ -57,7 +57,7 @@ function ContactForm() {
           {errors.username && errors.username.type === "minLength" && (
           <div className="issue mt-4 " role="alert">Please use full name</div>
           )}
-          <label htmlFor="username" className="mt-4 formLabel">Name<span className="accent">:</span></label>
+          <label htmlFor="username" className="formLabel">Name<span className="accent">:</span></label>
           <input
           name="username"
           id="username"

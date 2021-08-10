@@ -103,12 +103,12 @@ body {
   position: relative;
   clip-path:ellipse(100% 100% at 20% 0);
 }
-@media(max-width: 767px) {
+@media(max-width: 767px), (max-height: 420px) {
   .navbar {
     clip-path:ellipse(100% 100% at 40% 0);
+    padding-bottom: 150px;
   }
 }
-
 
 .navbar-brand,
 .navbar-toggler,
@@ -387,6 +387,12 @@ body {
     font-size: 40px !important;
   }
 }
+
+@media (max-width: 767px), (max-height: 420px) {
+  .iconTitle {
+    margin-top: -130px;
+  }
+}
 .aboutTextBox {
   text-align: left;
   font-family:Arial, Helvetica, sans-serif;
@@ -480,8 +486,6 @@ body {
   background-color: rgb(232, 110, 128);
 }
 
-
-/* blah */
 .iconSource {
   font-size: 30px;
   width: 200px;
