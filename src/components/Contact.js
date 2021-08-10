@@ -80,7 +80,6 @@ function ContactForm() {
           name="email"
           id="emailInput"
           className="emailInput"
-          required
           {...register("email", {
             required: true,
             validate: value => /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(value)
