@@ -561,7 +561,12 @@
     position: relative;
     height: 40px;
   }
+
+  .blogEntry:hover .rotate {
+    transform:rotate(-125deg)
+  }
 }
+
 
 .dateBox {
   text-align: center;
