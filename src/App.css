@@ -354,11 +354,20 @@
 .imageBox {
   overflow: hidden;
   position: relative;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .carousel {
   flex-wrap:nowrap;
   transition: 300ms;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.imageSlide {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .websiteLink {

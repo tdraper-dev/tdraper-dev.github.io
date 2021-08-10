@@ -43,7 +43,7 @@ const ImageCarousel = React.forwardRef((props, ref) => {
   )
 })
 
-const ImageBox = ({ images, style, website }) => {
+const ImageBox = ({ images, website }) => {
   const carouselRef = useRef(null)
   const [translate, setTranslate] = useState(0);
 
@@ -64,7 +64,7 @@ const ImageBox = ({ images, style, website }) => {
 
 
   return (
-    <div style={style} className={`col-12 col-xl-6 imageBox`} title="Click to see the site">
+    <div className={`col-12 col-xl-6 imageBox`} title="Click to see the site">
         <Arrow
           arrowClick={handleLeftArrowClick}
           direction={<FaArrowAltCircleLeft color="white" />}
@@ -134,18 +134,18 @@ const TextBox = ({ text, children }) => {
   )
 }
 
-function Project({ reverse, images, text, textTitle, style, font, website, keywords }) {
+function Project({ reverse, images, text, textTitle, font, website, keywords }) {
 
   return (
     <div className="d-flex projectStrip">
-      {reverse ? null : <ImageBox style={style} images={images} website={website} /> }
+      {reverse ? null : <ImageBox images={images} website={website} /> }
       <TextBox>
         <TextTitle font={font} title={textTitle} />
         <TextBlurb blurb={text} />
         <Button />
         <Keywords keywords={keywords} />
       </TextBox>
-      {reverse ? <ImageBox style={style} images={images} website={website} /> : null }
+      {reverse ? <ImageBox images={images} website={website} /> : null }
     </div>
   )
 }
@@ -159,7 +159,6 @@ function ProjectList() {
       text={"A MERN fullstack application with user subscription and token authorization that integrates Socket.IO live data emission and draggable element UI to simulate a live DnD Dungeon Master board. All wrapped in that nostalgic wood-paneled visual to bring us back to DnD'ing in mom's basement."} 
       textTitle={'Dungeon Map!'}
       reverse={false}
-      style={{backgroundColor: 'rgb(226, 78, 66)'}}
       font={{
         family: 'dungeonFont',
         fontSize: '40px',
@@ -172,7 +171,6 @@ function ProjectList() {
       text={'This is a currency converter app'}
       textTitle={'TravelMoney'}
       reverse={window.innerWidth > 1200 ? true : false}
-      style={{backgroundColor: 'rgb(233, 128, 0)'}}
       font={{
         fontSize: '30px',
       }}
@@ -184,7 +182,6 @@ function ProjectList() {
       text={'This is a to-do app'}
       textTitle={'Dawdlist'}
       reverse={false}
-      style={{backgroundColor: 'rgb(232, 110, 128)'}}
       font={{
         family: 'grutchFont',
         fontSize: '40px'
