@@ -7,17 +7,30 @@ init('user_vD4eEJLC3HZB2ZNi1Eehq')
 
 function ContactForm() {
   const [contactNumber, setContactNumber] = useState('000000')
+  const [statusMessage, setStatusMessage] = useState('Message')
+
   const { register, handleSubmit, formState: { errors } } = useForm();
 
   const onSubmit = (data) => {
+    const form = document.getElementById('contactMeForm')
+    const statusMessage = document.getElementById('statusMessage')
     generateContactNumber();
 
     sendForm('default_service', 'template_ktdvhxs', '#contactMeForm')
       .then(response => {
-        console.log('SUCCESS', response.status, response.text)
+        form.reset();
+        setStatusMessage("Message sent!");
+        statusMessage.className = "status-message success";
+        setTimeout(()=> {
+          statusMessage.className = 'status-message'
+        }, 5000)
       })
       .catch(error => {
-        console.log('FAILED...', error)
+        setStatusMessage("Failed to send message! Please try again later.");
+        statusMessage.className = "status-message failure";
+        setTimeout(()=> {
+          statusMessage.className = 'status-message'
+        }, 5000)
       })
   }
 
@@ -29,7 +42,8 @@ function ContactForm() {
   return (
     <>
     <div className="contactRow row">
-      <IconTitle title="Contact Me" margin="mb-5" />
+      <IconTitle title="Contact Me" margin="mb-3" />
+      <p id="statusMessage" className="status-message">{statusMessage}</p>
         <form id="contactMeForm" className="col-11 emailForm" onSubmit={handleSubmit(onSubmit)}>
           <input 
             type="hidden"
