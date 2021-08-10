@@ -1,9 +1,11 @@
 import React, { useState, useRef } from 'react';
+import { useLocation } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 
 const NavLink = ({ path }) => {
     const navRef= useRef();
-
+    const location = useLocation()
+    const pathNow = location.pathname.substring(1)
 
     const handleClick = () => {
         const prev = document.getElementsByClassName('activated')[0] || null;
@@ -15,7 +17,11 @@ const NavLink = ({ path }) => {
 
     return (
     <li className="nav-item mx-lg-3">
-        <Link onClick={handleClick} ref={navRef} to={`/${path}`} className={`nav-link ${path ? '' : 'activated'}`}>{path || 'Home'}</Link>
+        <Link 
+            onClick={handleClick} 
+            ref={navRef} 
+            to={`/${path}`} 
+            className={`nav-link ${pathNow === path ? 'activated' : ''}`}>{path || 'Home'}</Link>
     </li>
     )
 }
