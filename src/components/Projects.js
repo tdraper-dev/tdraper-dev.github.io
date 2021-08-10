@@ -21,13 +21,20 @@ const Arrow = ({ direction, style, arrowClick }) => {
   )
 }
 
-const ImageSlide = ({ image }) => {
+const ImageSlide = ({ image, website, icons }) => {
+
 
   return (
     <div className="imageSlide">
-      
-        <img alt="Project Slide" src={image} className="noselect img-fluid img" />
-
+        <a className="websiteLink" rel="noreferrer" href={website} target="_blank">
+          <img alt="Project Slide" src={image} className="noselect img-fluid img" />
+        </a>
+        {icons 
+          ? <div className="homeIconImages">
+              {icons}
+            </div>
+          : null
+        }
     </div>
   )
 }
@@ -36,14 +43,19 @@ const ImageCarousel = React.forwardRef((props, ref) => {
 
   return (
     <div ref={ref} className="carousel row">
-      {props.images.map(image => {
-        return <ImageSlide key={Math.random()} image={image} />
+      {props.images.map((image, index) => {
+        return <ImageSlide 
+          key={Math.random()} 
+          image={image} 
+          website={props.website[index] || props.website[0]} 
+          icons={props.icons[index] || null}
+          />
       })}
     </div>
   )
 })
 
-const ImageBox = ({ images, website }) => {
+export const ImageBox = ({ images, website, icons=[], classname}) => {
   const carouselRef = useRef(null)
   const [translate, setTranslate] = useState(0);
 
@@ -64,15 +76,13 @@ const ImageBox = ({ images, website }) => {
 
 
   return (
-    <div className={`col-12 col-xl-6 imageBox`} title="Click to see the site">
+    <div className={classname} title="Click to see the site">
         <Arrow
           arrowClick={handleLeftArrowClick}
           direction={<FaArrowAltCircleLeft color="white" />}
           style={{left: 0}} 
         />
-        <a className="websiteLink" rel="noreferrer" href={website} target="_blank">
-          <ImageCarousel images={images} ref={carouselRef} />
-        </a>
+          <ImageCarousel icons={icons} website={website} images={images} ref={carouselRef} />
         <Arrow 
           arrowClick={handleRightArrowClick}
           direction={<FaArrowAltCircleRight color="white" />}
@@ -134,18 +144,18 @@ const TextBox = ({ text, children }) => {
   )
 }
 
-function Project({ reverse, images, text, textTitle, font, website, keywords }) {
+function Project({ reverse=false, images, text, textTitle, font, website, keywords }) {
 
   return (
     <div className="d-flex projectStrip">
-      {reverse ? null : <ImageBox images={images} website={website} /> }
+      {reverse ? null : <ImageBox images={images} website={website} classname="col-12 col-xl-6 imageBox" /> }
       <TextBox>
         <TextTitle font={font} title={textTitle} />
         <TextBlurb blurb={text} />
         <Button />
         <Keywords keywords={keywords} />
       </TextBox>
-      {reverse ? <ImageBox images={images} website={website} /> : null }
+      {reverse ? <ImageBox images={images} website={website} classname="col-12 col-xl-6 imageBox" /> : null }
     </div>
   )
 }
@@ -163,7 +173,7 @@ function ProjectList() {
         family: 'dungeonFont',
         fontSize: '40px',
       }}
-      website={'https://thedungeonmap.herokuapp.com/login'}
+      website={['https://thedungeonmap.herokuapp.com/login']}
       keywords={['MERN', 'NodeJs', 'Express', 'React', 'React-Router', 'React Hooks', 'Bootstrap', 'Socket.IO', 'Token Authentication', 'MongoDB', 'Mongoose', 'Image Scaling', 'Draggable Elements', 'Chat Functionality']}
     />
     <Project
@@ -174,7 +184,7 @@ function ProjectList() {
       font={{
         fontSize: '30px',
       }}
-      website={'https://powerful-tor-29629.herokuapp.com/'}
+      website={['https://powerful-tor-29629.herokuapp.com/']}
       keywords={['Frontend', 'React', 'React Legacy', 'React-Router', 'Bootstrap', 'API Requests', 'Wikipedia']}
     />
     <Project
@@ -186,7 +196,7 @@ function ProjectList() {
         family: 'grutchFont',
         fontSize: '40px'
       }}
-      website={'https://dawdlist.netlify.app/'}
+      website={['https://dawdlist.netlify.app/']}
       keywords={['JQuery', 'DOM Manipulation', 'Bootstrap', 'HTTP Polling']}
     />
     </>

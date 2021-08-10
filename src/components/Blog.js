@@ -57,7 +57,7 @@ function BlogEntry({ content, title, color, date }) {
   )
 }
 
-function BlogSheet({ blogs }) {
+export function BlogSheet({ blogs }) {
 
   return (
     <>

@@ -71,7 +71,7 @@ function About() {
         <div className="iconRow row">
             <IconTitle title="My Tech Stack" margin="mb-5" />
             <Stack type="Frontend" typeIcon={<RiComputerLine />}>
-                <ImHtmlFive title="HTML5" className="icon" color="rgb(227, 76, 38)"/>
+                    <ImHtmlFive title="HTML5" className="icon" color="rgb(227, 76, 38)"/>
                     <SiCss3 title="CSS3" className="icon" color="rgb(38, 77, 228)" />
                     <SiJavascript title="Javascript" className="icon" style={{backgroundColor: 'rgb(50, 51, 48)', color: 'rgb(240,219,79)'}} />
                     <SiJquery title="jQuery" className="icon" color="rgb(0, 109, 176)"/>

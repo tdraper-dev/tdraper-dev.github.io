@@ -5,7 +5,7 @@ import IconTitle from './IconTitle'
 import { init, sendForm } from 'emailjs-com'
 init('user_vD4eEJLC3HZB2ZNi1Eehq')
 
-function ContactForm() {
+export function ContactBox() {
   const [contactNumber, setContactNumber] = useState('000000')
   const [statusMessage, setStatusMessage] = useState('Message')
 
@@ -38,12 +38,10 @@ function ContactForm() {
     const numStr = "000000" + (Math.random() * 1000000 | 0);
     setContactNumber(numStr.substring(numStr.length - 6));
   }
- 
+
   return (
     <>
-    <div className="contactRow row">
-      <IconTitle title="Contact Me" margin="mb-3" />
-      <p id="statusMessage" className="status-message">{statusMessage}</p>
+    <p id="statusMessage" className="status-message">{statusMessage}</p>
         <form id="contactMeForm" className="col-11 emailForm" onSubmit={handleSubmit(onSubmit)}>
           <input 
             type="hidden"
@@ -109,6 +107,17 @@ function ContactForm() {
 
           <button type="submit" className="formSubmitButton mt-4">Send</button>
         </form>
+        </>
+  )
+}
+
+function ContactForm() {
+
+  return (
+    <>
+    <div className="contactRow row">
+      <IconTitle title="Contact Me" margin="mb-3" />
+      <ContactBox />
     </div>
     </>
   )
