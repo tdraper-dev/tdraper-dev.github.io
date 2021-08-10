@@ -1,5 +1,49 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom'
+
+const NavLink = ({ path }) => {
+    const navRef= useRef();
+
+
+    const handleClick = () => {
+        const prev = document.getElementsByClassName('activated')[0] || null;
+        if(prev) {
+            prev.classList.remove('activated')
+        }
+        navRef.current.classList.add('activated');
+    }
+
+    return (
+    <li className="nav-item mx-lg-3">
+        <Link onClick={handleClick} ref={navRef} to={`/${path}`} className={`nav-link ${path ? '' : 'activated'}`}>{path || 'Home'}</Link>
+    </li>
+    )
+}
+
+const NavBrand = () => {
+
+    return (
+        <Link to="/" className='navbar-brand'>
+            <span 
+                className="otherTitleSpecial" 
+                style={{color: 'white'}}>
+                <span 
+                    className="t-letter">t
+                </span>
+                Draper
+            </span>
+            <div 
+                className="period" 
+                style={{color: 'rgba(226, 78, 66)', display: 'inline-block'}}
+            >.</div>
+            <div 
+                className="titleSpecial" 
+                style={{color: 'rgb(233, 128, 0)'}}
+            >dev</div>
+        </Link>
+    )
+}
+
 
 function Navbar() {
     const [visible, setVisible] = useState(false)
@@ -13,11 +57,8 @@ function Navbar() {
         }, 300)
     }
     return (
-        <nav className="fixed-top navbar navbar-expand-lg navbar-dark">
-            <Link to="/" className='navbar-brand'>
-                <span className="otherTitleSpecial" style={{color: 'white'}}><span className="t-letter">t</span>Draper</span>
-                <div className="period" style={{color: 'rgba(226, 78, 66)', display: 'inline-block'}}>.</div>
-                <div className="titleSpecial" style={{color: 'rgb(233, 128, 0)'}}>dev</div></Link>
+        <nav className="navbar navbar-expand-lg navbar-dark">
+            <NavBrand />
             <button 
                 className="navbar-toggler" 
                 type="button"
@@ -27,21 +68,11 @@ function Navbar() {
             </button>
             <div className={`collapse navbar-collapse ${visible ? 'show' : ''}`} id="navBarDropDown">
                 <ul className="navbar-nav">
-                <li className="nav-item mx-lg-3">
-                        <Link to='/' className="nav-link">Home</Link>
-                    </li>
-                    <li className="nav-item mx-lg-3">
-                        <Link to='/About' className="nav-link">About</Link>
-                    </li>
-                    <li className="nav-item mx-lg-3">
-                        <Link to='/Projects' className="nav-link">Projects</Link>
-                    </li>
-                    <li className="nav-item mx-lg-3">
-                        <Link to='/Blog' className="nav-link">Blog</Link>
-                    </li>
-                    <li className="nav-item mx-lg-3">
-                        <Link to='/Contact' className="nav-link">Contact</Link>
-                    </li>
+                    <NavLink path="" />
+                    <NavLink path="About" />
+                    <NavLink path="Projects" />
+                    <NavLink path="Blog" />
+                    <NavLink path="Contact" />
                 </ul>
             </div>
         </nav>

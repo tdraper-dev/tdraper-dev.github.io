@@ -97,7 +97,7 @@ const Keywords = ({ keywords }) => {
 }
 
 const TextTitle = ({ title, font=0 }) => {
-  console.log(font)
+
   return (
     <h3 style={{fontFamily: font.family, fontSize: font.fontSize}} className="projectTitle">
       {title}
