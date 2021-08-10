@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/tdraper.dev/static/css/main.b982ef40.chunk.css",
-    "main.js": "/tdraper.dev/static/js/main.8f39c1d2.chunk.js",
-    "main.js.map": "/tdraper.dev/static/js/main.8f39c1d2.chunk.js.map",
+    "main.js": "/tdraper.dev/static/js/main.9d252d28.chunk.js",
+    "main.js.map": "/tdraper.dev/static/js/main.9d252d28.chunk.js.map",
     "runtime-main.js": "/tdraper.dev/static/js/runtime-main.cbcc1da9.js",
     "runtime-main.js.map": "/tdraper.dev/static/js/runtime-main.cbcc1da9.js.map",
     "static/css/2.983f79de.chunk.css": "/tdraper.dev/static/css/2.983f79de.chunk.css",
@@ -32,6 +32,6 @@
     "static/css/2.983f79de.chunk.css",
     "static/js/2.12e630e8.chunk.js",
     "static/css/main.b982ef40.chunk.css",
-    "static/js/main.8f39c1d2.chunk.js"
+    "static/js/main.9d252d28.chunk.js"
   ]
 }
