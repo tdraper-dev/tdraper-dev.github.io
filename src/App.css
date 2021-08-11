@@ -368,14 +368,11 @@ body {
   margin-bottom: 10px;
   position: relative;
 }
-.imageStack {
-  
-}
+
 .imageSpecial {
   height: 250px;
   width: 250px;
   clip-path: circle();
-  /*transform: translateX(-82%) translateY(-12%);*/
 }
 
 .homeIcon{
@@ -410,20 +407,21 @@ body {
 
 }
 
-.fadeRight {
-  animation: fadeInWithSlideRight;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease;
-}
-.fadeLeft {
-  animation: fadeInWithSlideLeft;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease;
-} 
 
 @media(min-width: 1200px) {
+  .fadeRight {
+    animation: fadeInWithSlideRight;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+  }
+  .fadeLeft {
+    animation: fadeInWithSlideLeft;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+  } 
+  
   .fadeDown {
     animation: fadeInWithSlideDown;
     animation-duration: 1s;
@@ -435,7 +433,6 @@ body {
     align-self: center;
   }
   .homeProjectContainer.projectStack {
-    /*transform:translateY(-15%) translateX(10px);*/
     margin-top: 20px;
   }
   .homeProjectContainer.projectStack .stackContainer {
