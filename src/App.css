@@ -78,9 +78,12 @@ body::-webkit-scrollbar {
   display: none; 
 }
 
-html, body {
-  overflow-x: hidden;
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
 }
+
 /* Hide scrollbar for IE, Edge and Firefox */
 body {
   -ms-overflow-style: none;  /* IE and Edge */
