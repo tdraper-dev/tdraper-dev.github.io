@@ -82,7 +82,7 @@ function Home() {
         <div className="container-fluid">
         <div className="homeRow row">
             <IconTitle title="" margin="mb-3" />
-            <div className="col-s-12 col-md-10 col-lg-12 landingBox d-flex">
+            <div className="col-s-12 col-md-10 col-lg-12 landingBox d-flex fadeDown">
                 <Stack
                     containerStyles='imageStack'
                     typeIcon={Taiwan}
@@ -93,7 +93,7 @@ function Home() {
                 </p>
             </div>
             <HomeContainer
-                type="projectStack col-12 col-xl-4 fadeLeft">
+                type="projectStack col-12 col-xl-4 fadeRight">
                 <Stack
                     type={'Frontend'}
                     typeIcon={<RiComputerLine />}
@@ -124,7 +124,7 @@ function Home() {
             </HomeContainer>
 
             <HomeContainer 
-                type="projectPeak fadeRight col-10 col-xl-7 "
+                type="projectPeak fadeLeft  col-10 col-xl-7 "
                
             >
                 <ImageBox 
