@@ -455,6 +455,7 @@ body {
     justify-content: space-between;
     order: 2;
     margin-top: 0;
+    align-items:initial;
   }
   .homeProjectContainer.projectStack .stackContainer {
     margin: 0 !important;
@@ -478,7 +479,6 @@ body {
 @media(max-width: 635px) {
   .homeProjectContainer.projectStack {
     justify-content: space-around;
-    align-items:initial;
   }
   .landingGreeting {
     font-size: 25px;
