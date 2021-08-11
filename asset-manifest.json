@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/tdraper.dev/static/css/main.d497c504.chunk.css",
+    "main.css": "/tdraper.dev/static/css/main.44bcee4d.chunk.css",
     "main.js": "/tdraper.dev/static/js/main.e7cc4b30.chunk.js",
     "main.js.map": "/tdraper.dev/static/js/main.e7cc4b30.chunk.js.map",
     "runtime-main.js": "/tdraper.dev/static/js/runtime-main.cbcc1da9.js",
@@ -12,7 +12,7 @@
     "static/js/3.f24717d7.chunk.js.map": "/tdraper.dev/static/js/3.f24717d7.chunk.js.map",
     "index.html": "/tdraper.dev/index.html",
     "static/css/2.983f79de.chunk.css.map": "/tdraper.dev/static/css/2.983f79de.chunk.css.map",
-    "static/css/main.d497c504.chunk.css.map": "/tdraper.dev/static/css/main.d497c504.chunk.css.map",
+    "static/css/main.44bcee4d.chunk.css.map": "/tdraper.dev/static/css/main.44bcee4d.chunk.css.map",
     "static/js/2.604005bd.chunk.js.LICENSE.txt": "/tdraper.dev/static/js/2.604005bd.chunk.js.LICENSE.txt",
     "static/media/CurrencyConverterDisplay(resized).3560a60c.png": "/tdraper.dev/static/media/CurrencyConverterDisplay(resized).3560a60c.png",
     "static/media/CurrencyConverterHome(resized).3ae8198a.png": "/tdraper.dev/static/media/CurrencyConverterHome(resized).3ae8198a.png",
@@ -32,7 +32,7 @@
     "static/js/runtime-main.cbcc1da9.js",
     "static/css/2.983f79de.chunk.css",
     "static/js/2.604005bd.chunk.js",
-    "static/css/main.d497c504.chunk.css",
+    "static/css/main.44bcee4d.chunk.css",
     "static/js/main.e7cc4b30.chunk.js"
   ]
 }
