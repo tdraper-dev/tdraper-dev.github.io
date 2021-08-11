@@ -402,10 +402,12 @@ body {
   display: flex;
   flex-direction: column;
   text-align: left;
+  word-wrap:break-word;
 }
 .noP {
   padding: 0;
   margin: 0;
+
 }
 
 /*.fadeRight {
@@ -423,28 +425,6 @@ body {
 
 @media(min-width: 1200px) {
 
-  .boldBig {
-    display: flex;
-    height: fit-content;
-    width: fit-content;
-    margin: 0;
-    padding: 0;
-    font-weight: bolder;
-    font-size: 80px;
-    margin-bottom: -30px;
-  }
-  .landingGreeting{
-    margin-left: auto;
-    margin-bottom: 40px;
-    font-size: 35px;
-    text-align: left;
-    padding-left: 50px;
-    padding-top: 0;
-  }
-  .imagestack {
-    top: -10%;
-    left: -8%;
-  }
   .homeProjectContainer.projectPeak {
     margin-top: -100px;
     align-self: center;
@@ -472,17 +452,8 @@ body {
   }
 }
 @media(max-width: 1199px) {
-  .landingGreeting {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .boldBig {
-    height: fit-content;
-    width: fit-content;
-    text-align: center;
-    margin-bottom: 0;
+  .landingBox {
+    margin-top: 30px;
   }
   .homeProjectContainer.projectStack .displayIcon {
     height: 150px;
@@ -494,18 +465,7 @@ body {
     margin-top:-400px;
     padding-bottom: 100px;
   }
-  .landingBox {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .imageStack {
 
-    z-index: 1;
-    top: 2%;
-    right: 40%;
-  }
   .landingGreeting,
   .homeProjectContainer {
     margin-top: 50px;
@@ -532,9 +492,47 @@ body {
     margin: 0 !important;
   }
 }
+@media(min-width: 992px) {
+  .boldBig {
+    display: flex;
+    height: fit-content;
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+    font-weight: bolder;
+    font-size: 80px;
+    margin-bottom: -30px;
+  }
+  .landingGreeting{
+    margin-left: auto;
+    margin-bottom: 40px;
+    font-size: 35px;
+    text-align: left;
+    padding-left: 50px;
+    padding-top: 0;
+  }
+}
 @media(max-width: 991px) {
   .homeRow {
     margin-top: -400px;
+  }
+  .landingGreeting {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .boldBig {
+    height: fit-content;
+    width: fit-content;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  .landingBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
   }
 }
 @media(max-width: 735px) {
@@ -552,7 +550,6 @@ body {
     justify-content: space-around;
   }
   .landingGreeting {
-    font-size: 25px;
     margin-bottom: 50px;
   }
 }
