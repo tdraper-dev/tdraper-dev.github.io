@@ -82,10 +82,9 @@ function Home() {
         <div className="homeRow row">
             <IconTitle title="" margin="mb-3" />
             <div className="col-s-12 col-md-10 col-lg-12 d-flex">
-                <p className='col-12 col-xl-8 landingGreeting'>Travis Draper is a freelance webdesigner, theater artist, and puppeteer. <br/>Fullstack webdesign is his passion, joy, and nemesis.</p>
+                <p className='col-12 col-xl-8 landingGreeting fadeDown'>Travis Draper is a freelance webdesigner, theater artist, and puppeteer. <br/>Fullstack webdesign is his passion, joy, and nemesis.</p>
                 </div>
             <HomeContainer
-
                 type="projectStack col-12 col-xl-4 fadeLeft">
                 <Stack
                     type={'Frontend'}
@@ -113,7 +112,7 @@ function Home() {
             </HomeContainer>
 
             <HomeContainer 
-                type="projectPeak fadeLeft col-10 col-xl-7 "
+                type="projectPeak fadeRight col-10 col-xl-7 "
                
             >
                 <ImageBox 
