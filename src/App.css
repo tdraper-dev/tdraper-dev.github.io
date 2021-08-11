@@ -105,6 +105,7 @@ body {
   padding-bottom: 200px;
   position: relative;
   clip-path:ellipse(100% 100% at 20% 0);
+  transition: 500ms;
 }
 @media(max-width: 767px), (max-height: 420px) {
   .navbar {
@@ -292,21 +293,40 @@ body {
 .homeHeader {
   font-family:Khula-ExtraBold;
   position: absolute;
-  left: 10%;
-  top: -12%;
+  top: -15px;
   font-size: 60px;
 }
 .homeRow {
   padding-bottom: 100px;
+  margin-left: 50px;
+  margin-right: 50px;
   flex-direction: row;
+  margin-top: -380px;
+  position: relative;
+  justify-content: space-between;
 }
+.homeRow .iconTitle {
+  color: white;
+  position: absolute;
+  top: 100px;
+}
+
 .homeProjectContainer {
+  height: fit-content;
+}
+
+.homeProjectContainer.projectPeak {
   display: flex;
   position: relative;
-  margin-top: 50px;
   padding:25px;
-  background-color: rgba(250, 151, 29, 0.5);
+  background-color: rgba(250, 151, 29, 0.8);
   border-radius: 25px;
+}
+.homeProjectContainer.projectStack {
+  display: flex;
+  flex-direction: column;
+  padding-right: 0;
+  align-items: center;
 }
 
 .imageBox.imageBoxHome {
@@ -320,10 +340,12 @@ body {
 
 .homeIconImages {
   position: absolute;
+  background-color: rgba(250,250,250,0.5);
   display: flex;
-  width: 100%;
+  width: fit-content;
   justify-content:flex-end;
-  margin-right: 8%;
+  padding-right: 5%;
+  padding-top: 3px;
   bottom: 0;
   right: 0;
   color: white;
@@ -334,9 +356,94 @@ body {
   margin: 5px;
 }
 
-.projectPeak{
-  margin-top: 100px;
+#Frontend {
+  background-color: rgb(226, 78, 66);
 }
+#Tools {
+  background-color: rgb(233, 128, 0);
+}
+#Backend {
+  background-color: rgb(232, 110, 128);
+}
+
+.landingGreeting {
+  padding: 20px;
+  margin-top: 100px;
+  font-size: 30px;
+  text-align: center;
+  font-family: Khula-Bold;
+  display: flex;
+  color: white;
+  border-radius: 25px;
+  height: fit-content;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+@media(min-width: 1200px) {
+  .homeProjectContainer.projectStack {
+    transform:translateY(0px) translateX(10px);
+  }
+  .homeProjectContainer.projectStack .stackContainer {
+    flex-direction: row;
+    align-items: center;
+  }
+  .homeProjectContainer.projectStack .displayIcon {
+    height: 150px;
+    width: 150px;
+    font-size: 100px;
+  }
+  .homeProjectContainer.projectStack h3 {
+    font-size: 20px !important;
+  }
+  .homeProjectContainer.projectStack .stackContainer .iconBox {
+    margin-left: 5px;
+    height: 100%;
+    width: 41.6666667%;
+  }
+}
+@media(max-width: 1199px) {
+  .homeRow {
+    justify-content: center;
+  }
+  .landingGreeting,
+  .homeProjectContainer {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .landingGreeting {
+    order: 1;
+  }
+  .homeProjectContainer.projectPeak {
+    order: 3;
+  }
+  .homeProjectContainer.projectStack {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    order: 2;
+  }
+  .homeProjectContainer.projectStack .stackContainer {
+    margin: 0 !important;
+  }
+}
+@media(max-width: 735px) {
+  .homeProjectContainer.projectPeak {
+    padding: 0;
+    width: 100% !important;
+  }
+  .homeRow {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media(max-width: 423px) {
+  .homeProjectContainer.projectStack {
+    justify-content: center;
+  }
+}
+
 /*-------------------------------------------------------------------------------------------------------------------------- */
 
 /* ---------------------------- ABOUT ME PAGE STYILINGS ---------------------------------------------------- */
@@ -465,15 +572,7 @@ body {
   font-size: 150px;
   color: white;
 }
-#Frontend {
-  background-color: rgb(226, 78, 66);
-}
-#Tools {
-  background-color: rgb(233, 128, 0);
-}
-#Backend {
-  background-color: rgb(232, 110, 128);
-}
+
 
 .iconSource {
   font-size: 30px;

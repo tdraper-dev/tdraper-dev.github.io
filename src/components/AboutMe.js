@@ -12,15 +12,17 @@ import Taiwan from '../images/Travis_Taiwan.jpg'
                 /*Thank you for visiting my portfolio. My name is Travis Draper. This is where text will go describing who I am, why I chose to study web development, what I bring to the table, what I hope to get out of a career in web development, and why I'm a great candidate for any position.*/
 
 
-const Stack = ({type, typeIcon, children}) => {
+export const Stack = ({type, typeIcon, children, iconStyles='', headerStlyes=''}) => {
 
     return (
         <div className="stackContainer">
-            <div id={type} className="displayIcon">
-                {typeIcon}
+            <div className={`stackHeader ${headerStlyes}`}>
+                <div id={type} className="displayIcon">
+                    {typeIcon}
+                </div>
+                <h3 className="ps-1 mt-2">{type}</h3>
             </div>
-            <h3 className="ps-1 mt-2">{type}</h3>
-            <div className="iconBox iconSource d-flex mb-5">
+            <div className={`iconBox iconSource d-flex ${iconStyles}`}>
                 {children}
             </div>
         </div>
@@ -69,8 +71,14 @@ function About() {
             <hr className="lineRest" />
         </div>
         <div className="iconRow row">
-            <IconTitle title="My Tech Stack" margin="mb-5" />
-            <Stack type="Frontend" typeIcon={<RiComputerLine />}>
+            <IconTitle title="My Tech Stack">
+                <hr size="10" className='lineBreak mb-5' />
+            </IconTitle>
+            <Stack 
+                type="Frontend" 
+                typeIcon={<RiComputerLine />} 
+                iconStyles={'mb-5'}
+            >
                     <ImHtmlFive title="HTML5" className="icon" color="rgb(227, 76, 38)"/>
                     <SiCss3 title="CSS3" className="icon" color="rgb(38, 77, 228)" />
                     <SiJavascript title="Javascript" className="icon" style={{backgroundColor: 'rgb(50, 51, 48)', color: 'rgb(240,219,79)'}} />
@@ -79,13 +87,21 @@ function About() {
                     <SiRedux title="Redux" className="icon" color="rgb(118, 74, 188)"/>
                     <SiTypescript title="Typescript" className="icon" color="rgb(0, 122, 204)" />
             </Stack>
-            <Stack type="Backend" typeIcon={<BsServer />}>
+            <Stack 
+                type="Backend" 
+                typeIcon={<BsServer />} 
+                iconStyles={'mb-5'}
+            >
                 <FaNodeJs title="Nodejs" className="icon" color="rgb(60, 135, 58)" />
                 <SiMongodb title="MongoDB" className="icon" color="rgb(77, 179, 61)"/>
                 <SiGraphql title="GraphyQl" className="icon" color="rgb(229, 53, 171)"/>
                 <SiSocketDotIo title="Socket.IO" className="icon" />
             </Stack>
-            <Stack type="Tools" typeIcon={<GoTools />}>
+            <Stack 
+                type="Tools" 
+                typeIcon={<GoTools />} 
+                iconStyles={'mb-5'}
+            >
                 <SiBootstrap title="Bootstrap" className="icon" color="rgb(86, 61, 124)"/>
                 <SiJest title="Jest" className="icon" color="rgb(153, 66, 91)"/>
             </Stack>

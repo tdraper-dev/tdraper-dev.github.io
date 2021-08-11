@@ -63,7 +63,7 @@ function Navbar() {
         }, 300)
     }
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark">
+        <nav id="navbar" className="navbar navbar-expand-lg navbar-dark">
             <NavBrand />
             <button 
                 className="navbar-toggler" 

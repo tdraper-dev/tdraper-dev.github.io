@@ -1,17 +1,16 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
 import { ImageBox } from './Projects'
-import { BlogSheet } from './Blog'
-import { blogPosts } from '../blogPosts/Blogs'
-import { ContactBox } from './Contact'
-
+import { Stack } from './AboutMe'
 import DMLogin from '../images/DungeonMapLogin(resized).png'
 import CurHome from '../images/CurrencyConverterHome(resized).png'
 import DawdHome from '../images/DawdHome(resized).png'
 import IconTitle from './IconTitle'
 
+import { RiComputerLine } from 'react-icons/ri'
+import { GoTools } from 'react-icons/go'
+import { BsServer } from 'react-icons/bs'
 import { ImHtmlFive } from 'react-icons/im'
-import { SiCss3, SiJavascript, SiJquery, SiMongodb, SiBootstrap, SiSocketDotIo } from 'react-icons/si'
+import { SiCss3, SiJavascript, SiJquery, SiMongodb, SiGraphql, SiBootstrap, SiSocketDotIo, SiJest, SiRedux, SiTypescript } from 'react-icons/si'
 import { FaReact, FaNodeJs } from 'react-icons/fa'
 
 const homeIcons = [
@@ -56,7 +55,7 @@ const homeIcons = [
     ]
 ]
 
-const HomeContainer = ({ title, style, type, children }) => {
+const HomeContainer = ({ title, style, type='', children }) => {
 
     return (
         <div 
@@ -69,13 +68,53 @@ const HomeContainer = ({ title, style, type, children }) => {
 }
 
 function Home() {
-    const [flip, setFlip] = useState(false);
+
+    useEffect(() => {
+        const nav = document.getElementById('navbar')
+        nav.style.paddingBottom='400px'
+        return () => {
+            nav.style.paddingBottom="200px"
+        }
+    }, [])
+
     return (
+        <div className="container-fluid">
         <div className="homeRow row">
-            <IconTitle title="Hello, I'm Travis Draper" margin="mb-3" />
+            <IconTitle title="" margin="mb-3" />
+            <div className="col-8 col-xl-12 d-flex">
+                <p className='col-12 col-xl-8 landingGreeting'>Travis Draper is a freelance webdesigner, theater artist, and puppeteer. <br/>Fullstack webdesign is his passion, joy, and nemesis.</p>
+                </div>
+            <HomeContainer
+
+                type="projectStack col-12 col-xl-4 fadeLeft">
+                <Stack
+                    type={'Frontend'}
+                    typeIcon={<RiComputerLine />}
+                    iconStyles={'col-5'}
+                >
+                    <ImHtmlFive title="HTML5" className="icon" color="rgb(227, 76, 38)"/>
+                    <SiCss3 title="CSS3" className="icon" color="rgb(38, 77, 228)" />
+                    <SiJavascript title="Javascript" className="icon" style={{backgroundColor: 'rgb(50, 51, 48)', color: 'rgb(240,219,79)'}} />
+                    <SiJquery title="jQuery" className="icon" color="rgb(0, 109, 176)"/>
+                    <FaReact title="React" className="icon" color="rgb(97, 219, 251)"/>
+                    <SiRedux title="Redux" className="icon" color="rgb(118, 74, 188)"/>
+                    <SiTypescript title="Typescript" className="icon" color="rgb(0, 122, 204)" />
+                </Stack>
+                <Stack type="Backend" typeIcon={<BsServer />}>
+                    <FaNodeJs title="Nodejs" className="icon" color="rgb(60, 135, 58)" />
+                    <SiMongodb title="MongoDB" className="icon" color="rgb(77, 179, 61)"/>
+                    <SiGraphql title="GraphyQl" className="icon" color="rgb(229, 53, 171)"/>
+                    <SiSocketDotIo title="Socket.IO" className="icon" />
+                </Stack>
+                <Stack type="Tools" typeIcon={<GoTools />}>
+                    <SiBootstrap title="Bootstrap" className="icon" color="rgb(86, 61, 124)"/>
+                    <SiJest title="Jest" className="icon" color="rgb(153, 66, 91)"/>
+                </Stack>
+            </HomeContainer>
+
             <HomeContainer 
-                type="projectPeak fadeLeft"
-                title="Check out my work"
+                type="projectPeak fadeLeft col-10 col-xl-7 "
+               
             >
                 <ImageBox 
                     images={[DMLogin, CurHome, DawdHome]}
@@ -84,7 +123,10 @@ function Home() {
                     classname="imageBox imageBoxHome"
                 />
             </HomeContainer>
+
         </div>
+        </div>
+
 
     )
 }

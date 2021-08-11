@@ -12,19 +12,37 @@ import About from './AboutMe'
 import Projects from './Projects'
 import Contact from './Contact'
 
-function Layout() {
+function NotFound() {
+
     return (
-        <>
-        <Navbar/>
+        <div>NOT FOUND!</div>
+    )
+}
+
+function Pages() {
+
+    return (
         <div className="container">
             <Switch>
                 <Route path="/About" component={About} />
                 <Route path="/Projects" component={Projects} />
                 <Route path="/Blog" component={Blog} />
                 <Route path="/Contact" component={Contact} />
-                <Route path="/" component={Home} />
+                <Route component={NotFound} />
             </Switch>
+
         </div>
+    )
+}
+
+function Layout() {
+    return (
+        <>
+        <Navbar/>
+            <Switch>
+                <Route exact path="/" component={Home} />
+                <Pages />
+            </Switch>
         <Footer />
         </>
     )
