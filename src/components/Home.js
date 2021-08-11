@@ -81,7 +81,7 @@ function Home() {
         <div className="container-fluid">
         <div className="homeRow row">
             <IconTitle title="" margin="mb-3" />
-            <div className="col-8 col-xl-12 d-flex">
+            <div className="col-s-12 col-md-10 col-lg-12 d-flex">
                 <p className='col-12 col-xl-8 landingGreeting'>Travis Draper is a freelance webdesigner, theater artist, and puppeteer. <br/>Fullstack webdesign is his passion, joy, and nemesis.</p>
                 </div>
             <HomeContainer

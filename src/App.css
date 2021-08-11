@@ -405,14 +405,16 @@ body {
 @media(max-width: 1199px) {
   .homeRow {
     justify-content: center;
+    margin-top:-350px;
   }
   .landingGreeting,
   .homeProjectContainer {
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
   .landingGreeting {
     order: 1;
+    font-size: 28px;
   }
   .homeProjectContainer.projectPeak {
     order: 3;
@@ -423,9 +425,15 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     order: 2;
+    margin-top: 0;
   }
   .homeProjectContainer.projectStack .stackContainer {
     margin: 0 !important;
+  }
+}
+@media(max-width: 991px) {
+  .homeRow {
+    margin-top: -400px;
   }
 }
 @media(max-width: 735px) {
@@ -438,12 +446,42 @@ body {
     margin-right: 0;
   }
 }
-@media(max-width: 423px) {
+@media(max-width: 635px) {
   .homeProjectContainer.projectStack {
-    justify-content: center;
+    justify-content: space-around;
+    align-items:initial;
+  }
+  .landingGreeting {
+    font-size: 25px;
+    margin-bottom: 50px;
   }
 }
+@media(max-width: 575px) {
+  .landingGreeting {
+    font-size: 20px;
+  }
+  .homeIcon {
+    font-size: 30px;
+  }
+}
+@media(max-width: 435px) {
+  .homeProjectContainer.projectStack .stackContainer {
+    align-items: center;
 
+  }
+  .homeProjectContainer.projectStack .displayIcon {
+    height: 100px;
+    width: 100px;
+    font-size: 75px;
+  }
+  .homeProjectContainer.projectStack h3 {
+    font-size: 20px !important;
+  }
+  .homeProjectContainer.projectStack .stackContainer .iconBox {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+}
 /*-------------------------------------------------------------------------------------------------------------------------- */
 
 /* ---------------------------- ABOUT ME PAGE STYILINGS ---------------------------------------------------- */
