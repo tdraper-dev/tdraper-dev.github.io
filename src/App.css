@@ -415,19 +415,7 @@ body {
     animation-fill-mode: forwards;
     animation-timing-function: ease;
   }
-  .fadeLeft {
-    animation: fadeInWithSlideLeft;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease;
-  } 
-  
-  .fadeDown {
-    animation: fadeInWithSlideDown;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease;
-  }
+
   .homeProjectContainer.projectPeak {
     margin-top: -100px;
     align-self: center;
@@ -495,6 +483,20 @@ body {
   }
 }
 @media(min-width: 992px) {
+  .fadeLeft {
+    animation: fadeInWithSlideLeft;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+  } 
+  
+  .fadeDown {
+    animation: fadeInWithSlideDown;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+  }
+  
   .boldBig {
     display: flex;
     height: fit-content;
