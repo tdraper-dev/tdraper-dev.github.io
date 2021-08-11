@@ -7,6 +7,7 @@ import DawdHome from '../images/DawdHome(resized).png'
 import IconTitle from './IconTitle'
 
 import { RiComputerLine } from 'react-icons/ri'
+import Taiwan from '../images/Travis_Taiwan.jpg'
 import { GoTools } from 'react-icons/go'
 import { BsServer } from 'react-icons/bs'
 import { ImHtmlFive } from 'react-icons/im'
@@ -81,9 +82,13 @@ function Home() {
         <div className="container-fluid">
         <div className="homeRow row">
             <IconTitle title="" margin="mb-3" />
-            <div className="col-s-12 col-md-10 col-lg-12 d-flex">
-                <p className='col-12 col-xl-8 landingGreeting fadeDown'>Travis Draper is a freelance webdesigner, theater artist, and puppeteer. <br/>Fullstack webdesign is his passion, joy, and nemesis.</p>
-                </div>
+            <div className="col-s-12 col-md-10 col-lg-12 landingBox d-flex">
+                <Stack
+                    containerStyles='imageStack'
+                    typeIcon={Taiwan}
+                />
+                <p className='col-10 col-xl-12 landingGreeting'>I'm <span className="boldBig">Travis Draper</span>,<br/> a full stack web designer, theater artist, and puppeteer from Durham, NC.</p>
+            </div>
             <HomeContainer
                 type="projectStack col-12 col-xl-4 fadeLeft">
                 <Stack
@@ -105,7 +110,11 @@ function Home() {
                     <SiGraphql title="GraphyQl" className="icon" color="rgb(229, 53, 171)"/>
                     <SiSocketDotIo title="Socket.IO" className="icon" />
                 </Stack>
-                <Stack type="Tools" typeIcon={<GoTools />}>
+                <Stack 
+                    type="Tools" 
+                    typeIcon={<GoTools />}
+                    headerStyles="ps-xl-5"
+                >
                     <SiBootstrap title="Bootstrap" className="icon" color="rgb(86, 61, 124)"/>
                     <SiJest title="Jest" className="icon" color="rgb(153, 66, 91)"/>
                 </Stack>

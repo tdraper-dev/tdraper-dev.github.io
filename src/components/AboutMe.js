@@ -12,13 +12,16 @@ import Taiwan from '../images/Travis_Taiwan.jpg'
                 /*Thank you for visiting my portfolio. My name is Travis Draper. This is where text will go describing who I am, why I chose to study web development, what I bring to the table, what I hope to get out of a career in web development, and why I'm a great candidate for any position.*/
 
 
-export const Stack = ({type, typeIcon, children, iconStyles='', headerStlyes=''}) => {
-
+export const Stack = ({type, typeIcon, children, iconStyles='', headerStyles='', containerStyles=''}) => {
+    console.log(typeof typeIcon)
     return (
-        <div className="stackContainer">
-            <div className={`stackHeader ${headerStlyes}`}>
+        <div className={`stackContainer ${containerStyles}`}>
+            <div className={`stackHeader ${headerStyles}`}>
                 <div id={type} className="displayIcon">
-                    {typeIcon}
+                    {typeof typeIcon === 'string'
+                        ? <img className="imageSpecial" alt="my face" src={typeIcon} />
+                        : typeIcon
+                    }
                 </div>
                 <h3 className="ps-1 mt-2">{type}</h3>
             </div>
