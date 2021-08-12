@@ -9,9 +9,6 @@ import { SiCss3, SiJavascript, SiJquery, SiMongodb, SiGraphql, SiBootstrap, SiSo
 import { FaReact, FaNodeJs } from 'react-icons/fa'
 import Taiwan from '../images/Travis_Taiwan.jpg'
 
-                /*Thank you for visiting my portfolio. My name is Travis Draper. This is where text will go describing who I am, why I chose to study web development, what I bring to the table, what I hope to get out of a career in web development, and why I'm a great candidate for any position.*/
-
-
 export const Stack = ({type, typeIcon, children, iconStyles='', headerStyles='', containerStyles=''}) => {
  
     return (

@@ -13,7 +13,7 @@ import About from './AboutMe'
 import Projects from './Projects'
 import Contact from './Contact'
 
-function Pages({ children }) {
+function Pages() {
 
     return (
         <div className="container">
