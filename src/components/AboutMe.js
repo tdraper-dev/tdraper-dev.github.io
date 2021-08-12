@@ -13,7 +13,7 @@ import Taiwan from '../images/Travis_Taiwan.jpg'
 
 
 export const Stack = ({type, typeIcon, children, iconStyles='', headerStyles='', containerStyles=''}) => {
-    console.log(typeof typeIcon)
+ 
     return (
         <div className={`stackContainer ${containerStyles}`}>
             <div className={`stackHeader ${headerStyles}`}>

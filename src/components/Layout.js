@@ -2,6 +2,7 @@ import React from 'react'
 import {
     Switch,
     Route,
+    Redirect
 } from 'react-router-dom'
 
 import Navbar from './NavBar'
@@ -12,14 +13,7 @@ import About from './AboutMe'
 import Projects from './Projects'
 import Contact from './Contact'
 
-function NotFound() {
-
-    return (
-        <div>NOT FOUND!</div>
-    )
-}
-
-function Pages() {
+function Pages({ children }) {
 
     return (
         <div className="container">
@@ -28,7 +22,9 @@ function Pages() {
                 <Route path="/Projects" component={Projects} />
                 <Route path="/Blog" component={Blog} />
                 <Route path="/Contact" component={Contact} />
-                <Route component={NotFound} />
+                <Route path="/*">
+                    <Redirect to="/" />
+                </Route>
             </Switch>
 
         </div>

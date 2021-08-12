@@ -87,10 +87,10 @@ function Home() {
                     containerStyles='imageStack'
                     typeIcon={Taiwan}
                 />
-                <p className='col-10 col-xxl-11 landingGreeting'>
+                <div className='col-10 col-xxl-11 landingGreeting'>
                     <p className="boldBig">Travis Draper</p>
-                    <p className="noP">Full stack web designer, theater artist, and puppeteer from Durham, NC.</p>
-                </p>
+                    <p className="noP">Full stack web developer, theater artist, and puppeteer from Durham, NC.</p>
+                </div>
             </div>
             <HomeContainer
                 type="projectStack col-12 col-xl-4 fadeRight">
