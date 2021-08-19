@@ -27,10 +27,10 @@ const DateBox = ({ color, date }) => {
   )
 }
 
-const BlogTitle = ({ title, color, rotate, date }) => {
+const BlogTitle = ({ title, color, setRotate, rotate, date }) => {
 
   return (
-    <div className="blogTitle pt-2 d-flex" style={{ backgroundColor: color }}>
+    <div onClick={() => setRotate(!rotate)}className="blogTitle pt-2 d-flex" style={{ backgroundColor: color }}>
       <p className="blogTitleText col-10 my-0">{title}</p>
       <DateBox color={color} date={date} />
       <BlogArrow rotate={rotate} />
@@ -50,8 +50,8 @@ function BlogEntry({ content, title, color, date }) {
   const [rotate, setRotate] = useState(false)
   
   return (
-    <div onClick={()=>setRotate(!rotate)} className="col-12 blogEntry">
-      <BlogTitle rotate={rotate} title={title} color={color} date={date} />
+    <div className="col-12 blogEntry">
+      <BlogTitle setRotate={setRotate} rotate={rotate} title={title} color={color} date={date} />
       <BlogContent rotate={rotate} content={content} />
     </div>
   )
