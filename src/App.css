@@ -548,7 +548,7 @@ body {
     align-items: center;
     margin-top: 30px;
     animation: fadeIn;
-    animation-duration: 10ms;
+    animation-duration: 500ms;
   }
 }
 @media(max-width: 735px) {
