@@ -166,7 +166,7 @@ function ProjectList() {
     <>
     <Project
       images={[DMLogin, DMDashboard, DMGameboard]}
-      text={"A MERN fullstack application with user subscription and token authorization that integrates Socket.IO live data emission and draggable element UI to simulate a live DnD Dungeon Master board. All wrapped in that nostalgic wood-paneled visual to bring us back to DnD'ing in mom's basement."} 
+      text="A MERN fullstack application with user subscription and token authorization that integrates Socket.IO live data emission and draggable element UI to simulate a live DnD Dungeon Master board. All wrapped in that nostalgic wood-paneled visual to bring us back to DnD'ing in mom's basement." 
       textTitle={'Dungeon Map!'}
       reverse={false}
       font={{
@@ -178,7 +178,7 @@ function ProjectList() {
     />
     <Project
       images={[CurHome, CurDisplay, CurInfo]}
-      text={'This is a currency converter app'}
+      text='A React frontend web application that utilizes class components and React Router as well as integrates the Frankfurter currency data and Wikipedia APIs in order to deliver currency conversion data and travel information in a visually lightweight, airy build.'
       textTitle={'TravelMoney'}
       reverse={window.innerWidth > 1200 ? true : false}
       font={{
@@ -189,7 +189,7 @@ function ProjectList() {
     />
     <Project
       images={[DawdHome, DawdActive, DawdComplete]}
-      text={'This is a to-do app'}
+      text='A JQuery-built fullstack project that incorporates Bootstrap and HTTP Polling to create a live data refresh to-do list.'
       textTitle={'Dawdlist'}
       reverse={false}
       font={{
