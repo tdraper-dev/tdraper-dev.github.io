@@ -12,6 +12,14 @@
 }
 
 /* HELLO WORLD */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 @keyframes expand {
   0% {
@@ -516,21 +524,10 @@ body {
     padding-top: 0;
   }
 }
+
 @media(max-width: 991px) {
   .homeRow {
     margin-top: -400px;
-  }
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  .landingBox {
-    animation: fadeIn;
-    animation-duration: 10ms;
   }
 
   .landingGreeting {
@@ -550,6 +547,8 @@ body {
     flex-direction: column;
     align-items: center;
     margin-top: 30px;
+    animation: fadeIn;
+    animation-duration: 10ms;
   }
 }
 @media(max-width: 735px) {
