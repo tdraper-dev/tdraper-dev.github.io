@@ -422,12 +422,6 @@ body {
 
 
 @media(min-width: 1200px) {
-  .fadeRight {
-    animation: fadeInWithSlideRight;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease;
-  }
 
   .homeProjectContainer.projectPeak {
     margin-top: -100px;
@@ -502,6 +496,13 @@ body {
     animation-fill-mode: forwards;
     animation-timing-function: ease;
   } 
+
+  .fadeRight {
+    animation: fadeInWithSlideRight;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+  }
   
   .fadeDown {
     animation: fadeInWithSlideDown;
