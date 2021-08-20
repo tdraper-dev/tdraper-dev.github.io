@@ -131,6 +131,11 @@ body {
     padding-bottom: 150px;
   }
 }
+@media(max-width: 991px) {
+  .navbar {
+    transition: 300ms;
+  }
+}
 
 .navbar-brand,
 .navbar-toggler,
