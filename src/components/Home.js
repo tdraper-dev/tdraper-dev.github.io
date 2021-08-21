@@ -6,6 +6,7 @@ import CurHome from '../images/CurrencyConverterHome(resized).png'
 import DawdHome from '../images/DawdHome(resized).png'
 import IconTitle from './IconTitle'
 
+import { AiOutlineGithub } from 'react-icons/ai';
 import { RiComputerLine } from 'react-icons/ri'
 import Taiwan from '../images/Travis_Taiwan.jpg'
 import { GoTools } from 'react-icons/go'
@@ -127,12 +128,21 @@ function Home() {
                 type="projectPeak fadeLeft  col-10 col-xl-7 "
                
             >
+
                 <ImageBox 
                     images={[DMLogin, CurHome, DawdHome]}
                     website={['https://thedungeonmap.herokuapp.com/login', 'https://powerful-tor-29629.herokuapp.com/', 'https://dawdlist.netlify.app/']}
+                    sourceCodes={['https://github.com/tdraper-dev/thedungeonmap', 'https://github.com/tdraper-dev/travelmoney', 'https://github.com/tdraper-dev/dawdlist']}
                     icons={homeIcons}
                     classname="imageBox imageBoxHome"
-                />
+                >
+
+                    <div className="githubCodeIconLink">
+                        <AiOutlineGithub />
+                    </div>
+
+                </ImageBox>
+
             </HomeContainer>
 
         </div>

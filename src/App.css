@@ -341,8 +341,22 @@ body {
   display: flex;
   position: relative;
   padding:25px;
+  padding-top: 0;
   background-color: rgba(250, 151, 29, 0.8);
   border-radius: 25px;
+}
+.githubCodeIconLink {
+  position: absolute;
+  top: -3%;
+  left: 5%;
+  color:white;
+  font-size: 50px;
+}
+@media(max-width: 670px) {
+  .githubCodeIconLink {
+    font-size: 35px;
+    left: 10%;
+  }
 }
 .homeProjectContainer.projectStack {
   display: flex;
@@ -832,7 +846,13 @@ body {
   text-align: left;
   font-style:italic;
 }
-.learnMoreButton{
+
+.projectButtonsRow {
+  display: flex;
+  justify-content: space-around;
+}
+
+.projectButton{
   background-color: rgb(233, 128, 0);
   width: fit-content;
   padding: 10px;
@@ -843,16 +863,16 @@ body {
   font-weight: 600;
   font-family: Khula-Regular;
   color: white;
-  box-shadow: 5px 10px 8px rgb(0 0 0 / 50%);
+ 
   transition: 300ms;
 }
 @media(min-width: 1400px) {
-  .learnMoreButton {
+  .projectButton {
     font-size: 20px;
   }
 }
 @media(max-width: 1399px) {
-  .learnMoreButton {
+  .projectButton {
     font-size: 10px;
     margin-top: -25px;
   }
@@ -861,7 +881,7 @@ body {
   }
 }
 @media(max-width: 1199px) {
-  .learnMoreButton {
+  .projectButton {
     font-size: 20px;
     margin-top: 0;
     margin-bottom: 30px;
@@ -871,7 +891,7 @@ body {
   }
 }
 
-.learnMoreButton:hover {
+.projectButton:hover {
   transition: 300ms;
   transform:scaleY(120%) scaleX(120%);
 }
@@ -1113,7 +1133,6 @@ body {
   font-weight: 500;
   font-family: Khula-Regular;
   color: white;
-  box-shadow: 5px 10px 8px rgb(0 0 0 / 50%);
   transition: 300ms;
 }
 .formSubmitButton:hover {

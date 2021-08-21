@@ -29,7 +29,7 @@ const NavLink = ({ path }) => {
 const NavBrand = () => {
 
     return (
-        <Link to="/" className='navbar-brand'>
+        <Link to="/" className='navbar-brand' ariaLabel="Path to home page of Travis Draper portfolio">
             <span 
                 className="otherTitleSpecial" 
                 style={{color: 'white'}}>
@@ -74,11 +74,11 @@ function Navbar() {
             </button>
             <div className={`collapse navbar-collapse ${visible ? 'show' : ''}`} id="navBarDropDown">
                 <ul className="navbar-nav">
-                    <NavLink path="" />
-                    <NavLink path="About" />
-                    <NavLink path="Projects" />
-                    <NavLink path="Blog" />
-                    <NavLink path="Contact" />
+                    <NavLink path="" ariaLabel="Path to home page of Travis Draper portfolio"/>
+                    <NavLink path="About" ariaLabel="Path to About Me section of Travis Draper portfolio"/>
+                    <NavLink path="Projects" ariaLabel="Path to Projects section of Travis Draper portfolio"/>
+                    <NavLink path="Blog" ariaLabel="Path to Blog section of Travis Draper portfolio"/>
+                    <NavLink path="Contact" ariaLabel="Path to Contact Me form of Travis Draper portfolio"/>
                 </ul>
             </div>
         </nav>

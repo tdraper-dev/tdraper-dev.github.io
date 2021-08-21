@@ -26,7 +26,7 @@ const ImageSlide = ({ image, website, icons }) => {
 
   return (
     <div className="imageSlide">
-        <a className="websiteLink" rel="noreferrer" href={website} target="_blank">
+        <a className="websiteLink" rel="noreferrer" href={website} target="_blank" ariaLabel={`Path to ${website}, a project by Travis Draper`}>
           <img alt="Project Slide" src={image} className="noselect img-fluid img" />
         </a>
         {icons 
@@ -55,9 +55,10 @@ const ImageCarousel = React.forwardRef((props, ref) => {
   )
 })
 
-export const ImageBox = ({ images, website, icons=[], classname}) => {
+export const ImageBox = ({ images, website, icons=[], classname, children=null, sourceCodes=null}) => {
   const carouselRef = useRef(null)
   const [translate, setTranslate] = useState(0);
+  const [count, setCount] = useState(0);
 
   const handleRightArrowClick = () => {
     if(Math.abs(translate) >= (images.length-1)*100) {
@@ -65,6 +66,7 @@ export const ImageBox = ({ images, website, icons=[], classname}) => {
     }
     carouselRef.current.style.transform = `translateX(${translate - 100}%)`
     setTranslate(translate => translate - 100)
+    setCount(count => count + 1)
   }
   const handleLeftArrowClick = () => {
     if(Math.abs(translate) < 100) {
@@ -72,10 +74,11 @@ export const ImageBox = ({ images, website, icons=[], classname}) => {
     }
     carouselRef.current.style.transform = `translateX(${translate + 100}%)`
     setTranslate(translate => translate + 100)
+    setCount(count => count - 1)
   }
 
-
   return (
+    <>
     <div className={classname} title="Click to see the site">
         <Arrow
           arrowClick={handleLeftArrowClick}
@@ -83,12 +86,20 @@ export const ImageBox = ({ images, website, icons=[], classname}) => {
           style={{left: 0}} 
         />
           <ImageCarousel icons={icons} website={website} images={images} ref={carouselRef} />
+          {sourceCodes
+            ?
+            <a title={`Source Code: ${sourceCodes[count]}`} rel="noreferrer" href={sourceCodes[count]} target="_blank" className="noLink" ariaLabel={`Path to ${sourceCodes[count]}, a project by Travis Draper}`}>
+              {children}
+            </a>
+            : null
+          }
         <Arrow 
           arrowClick={handleRightArrowClick}
           direction={<FaArrowAltCircleRight color="white" />}
           style={{right: 0}}
          />
     </div>
+    </>
   )
 }
 const Keyword = ({ word }) => ( <p className="keyword mx-1 my-1">{word}</p> )
@@ -115,14 +126,37 @@ const TextTitle = ({ title, font=0 }) => {
   )
 }
 
-const Button = () => {
+const Button = ({ title, link, type }) => {
   return (
-    <Link className="noLink" to="/Blog">
-      <div className="learnMoreButton">
-        Learn More
-      </div>
-    </Link>
+    <>
+    {
+      type === 'Link'
+        ? 
+        <Link className="noLink" to={link} ariaLabel={`Path to a blog about making ${title}`}>
+          <div className="projectButton">
+            {title}
+          </div>
+        </Link>
+        :
+        <a className="noLink" rel="noreferrer" target="_blank" href={link} ariaLabel={`Path to source code for ${title}`}>
+          <div className="projectButton">
+            {title}
+          </div>
+        </a>
 
+    }
+    </>
+  )
+}
+
+const ProjectButtons = ({ content }) => {
+
+  return (
+    <div className="projectButtonsRow">
+      {content.map(contents => {
+        return <Button title={contents.title} link={contents.link} type={contents.type} />
+      })}
+    </div>
   )
 }
 
@@ -144,7 +178,16 @@ const TextBox = ({ text, children }) => {
   )
 }
 
-function Project({ reverse=false, images, text, textTitle, font, website, keywords }) {
+function Project({ 
+  reverse=false, 
+  images, 
+  text, 
+  textTitle, 
+  font, 
+  website, 
+  keywords, 
+  sourceCode 
+  }) {
 
   return (
     <div className="d-flex projectStrip">
@@ -152,7 +195,20 @@ function Project({ reverse=false, images, text, textTitle, font, website, keywor
       <TextBox>
         <TextTitle font={font} title={textTitle} />
         <TextBlurb blurb={text} />
-        <Button />
+        <ProjectButtons 
+          content={[
+            { 
+              title: 'Blog Post',
+              link: '/Blog',
+              type: 'Link',
+            },
+            {
+              title: 'Source Code', 
+              link: sourceCode,
+              type: 'a'
+            }
+          ]} 
+        />
         <Keywords keywords={keywords} />
       </TextBox>
       {reverse ? <ImageBox images={images} website={website} classname="col-12 col-xl-6 imageBox" /> : null }
@@ -174,6 +230,7 @@ function ProjectList() {
         fontSize: '40px',
       }}
       website={['https://thedungeonmap.herokuapp.com/login']}
+      sourceCode='https://github.com/tdraper-dev/thedungeonmap'
       keywords={['MERN', 'NodeJs', 'Express', 'React', 'React-Router', 'React Hooks', 'Bootstrap', 'Socket.IO', 'Token Authentication', 'MongoDB', 'Mongoose', 'Image Scaling', 'Draggable Elements', 'Chat Functionality']}
     />
     <Project
@@ -185,6 +242,7 @@ function ProjectList() {
         fontSize: '30px',
       }}
       website={['https://powerful-tor-29629.herokuapp.com/']}
+      sourceCode='https://github.com/tdraper-dev/travelmoney'
       keywords={['Frontend', 'React', 'React Legacy', 'React-Router', 'Bootstrap', 'API Requests', 'Wikipedia']}
     />
     <Project
@@ -197,6 +255,7 @@ function ProjectList() {
         fontSize: '40px'
       }}
       website={['https://dawdlist.netlify.app/']}
+      sourceCode='https://github.com/tdraper-dev/dawdlist'
       keywords={['JQuery', 'DOM Manipulation', 'Bootstrap', 'HTTP Polling']}
     />
     </>

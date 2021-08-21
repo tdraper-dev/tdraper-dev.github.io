@@ -9,17 +9,17 @@ function Footer() {
     return (
         <div id='footer' className="row">
             <div className="webIcon ">
-                <a href="#" className="github" target="_blank">
+                <a href="https://github.com/tdraper-dev" rel="noreferrer" className="github" target="_blank" ariaLabel="Path to Travis Draper's GitHub website with project source codes">
                     <AiOutlineGithub />
                 </a>
             </div>
             <div className="webIcon ">
-                <a href="#" className="linkedIn" target="_blank">
+                <a href="#" className="linkedIn" target="_blank" ariaLabel="Path to Travis Draper's LinkedIn profile page">
                     <AiOutlineLinkedin />
                 </a>
             </div>
             <div className="webIcon ">
-                <Link to="/Contact" className="mail">
+                <Link to="/Contact" className="mail" ariaLabel="Path to Contact Me Form on Travis Draper portfolio">
                     <AiOutlineMail />
                 </Link>
             </div>
