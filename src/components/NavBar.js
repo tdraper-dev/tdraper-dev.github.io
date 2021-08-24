@@ -74,7 +74,7 @@ function Navbar() {
             </button>
             <div className={`collapse navbar-collapse ${visible ? 'show' : ''}`} id="navBarDropDown">
                 <ul className="navbar-nav">
-                    <NavLink path="" ariaLabel="Path to home page of Travis Draper portfolio"/>
+                    <NavLink path="/" ariaLabel="Path to home page of Travis Draper portfolio"/>
                     <NavLink path="About" ariaLabel="Path to About Me section of Travis Draper portfolio"/>
                     <NavLink path="Projects" ariaLabel="Path to Projects section of Travis Draper portfolio"/>
                     <NavLink path="Blog" ariaLabel="Path to Blog section of Travis Draper portfolio"/>

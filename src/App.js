@@ -6,7 +6,7 @@ import Layout from './components/Layout'
 function App() {
 
   return (
-    <Router basename="/tdraper.dev">
+    <Router basename="/">
       <Layout />
     </Router>
   )
