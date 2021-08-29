@@ -14,7 +14,7 @@ function Footer() {
                 </a>
             </div>
             <div className="webIcon ">
-                <a href="#" className="linkedIn" target="_blank" ariaLabel="Path to Travis Draper's LinkedIn profile page">
+                <a href="https://www.linkedin.com/in/tdraper-dev/" className="linkedIn" target="_blank" rel="noreferrer" ariaLabel="Path to Travis Draper's LinkedIn profile page">
                     <AiOutlineLinkedin />
                 </a>
             </div>
