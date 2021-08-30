@@ -22,7 +22,7 @@ const ImageSlide = ({ image, website, icons }) => {
           <img 
             alt="Project Slide" 
             src={imageView} 
-            className="noselect img-fluid img" 
+            className={`noselect img-fluid img ${imageView === image.gif ? 'gifDisplay' : ''}`} 
             onMouseEnter={() => setImageView(image.gif || image.static)}
             onMouseLeave={() => setImageView(image.static || image.gif)}
           />

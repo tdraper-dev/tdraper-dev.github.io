@@ -811,6 +811,10 @@ body {
   padding-left: 0;
   padding-right: 0;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
 .websiteLink {
