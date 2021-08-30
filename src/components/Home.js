@@ -1,14 +1,22 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { ImageBox } from './Projects'
 import { Stack } from './AboutMe'
-import DMLogin from '../images/DungeonMapLogin(resized).png'
-import CurHome from '../images/CurrencyConverterHome(resized).png'
-import DawdHome from '../images/DawdHome(resized).png'
 import IconTitle from './IconTitle'
+import Taiwan from '../images/Travis_Taiwan.jpg'
+
+import DMLogin from '../images/DungeonMapLogin(resized).png'
+import DMMasterGif from '../gifs/DungeonMap/Master.gif'
+
+import CurHome from '../images/CurrencyConverterHome(resized).png'
+import CurMasterGif from '../gifs/TravelMoney/Master.gif'
+
+import DawdHome from '../images/DawdHome(resized).png'
+import DawdMasterGif from '../gifs/Dawdlist/Master.gif'
+
 
 import { AiOutlineGithub } from 'react-icons/ai';
 import { RiComputerLine } from 'react-icons/ri'
-import Taiwan from '../images/Travis_Taiwan.jpg'
+
 import { GoTools } from 'react-icons/go'
 import { BsServer } from 'react-icons/bs'
 import { ImHtmlFive } from 'react-icons/im'
@@ -130,7 +138,22 @@ function Home() {
             >
 
                 <ImageBox 
-                    images={[DMLogin, CurHome, DawdHome]}
+                    images={
+                        [
+                            {
+                                static: DMLogin,
+                                gif: DMMasterGif
+                            },
+                            {
+                                static: CurHome,
+                                gif: CurMasterGif
+                            },
+                            {
+                                static: DawdHome,
+                                gif: DawdMasterGif
+                            } 
+                        ]
+                    }
                     website={['https://thedungeonmap.herokuapp.com/login', 'https://powerful-tor-29629.herokuapp.com/', 'https://dawdlist.netlify.app/']}
                     sourceCodes={['https://github.com/tdraper-dev/thedungeonmap', 'https://github.com/tdraper-dev/travelmoney', 'https://github.com/tdraper-dev/dawdlist']}
                     icons={homeIcons}

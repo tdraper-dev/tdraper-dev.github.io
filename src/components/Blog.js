@@ -79,7 +79,7 @@ function Blog() {
     <>
     
     <div className="blogRow row">
-      <IconTitle title="Working Blog" margin="mb-5" />
+      <IconTitle title="Blog" margin="mb-5" />
       <BlogSheet blogs={blogPosts} />
     </div>
     </>

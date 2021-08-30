@@ -1,16 +1,8 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef } from 'react'
 import { Link } from 'react-router-dom' 
 import IconTitle from './IconTitle'
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa'
-import DMLogin from '../images/DungeonMapLogin(resized).png'
-import DMDashboard from '../images/DungeonMapDashboard(resized).png'
-import DMGameboard from '../images/DungeonMapGameBoard(resized).png'
-import CurHome from '../images/CurrencyConverterHome(resized).png'
-import CurDisplay from '../images/CurrencyConverterDisplay(resized).png'
-import CurInfo from '../images/CurrencyConverterInfo(resized).png'
-import DawdHome from '../images/DawdHome(resized).png'
-import DawdActive from '../images/DawdActive(resized).png'
-import DawdComplete from '../images/DawdComplete(resized).png'
+import { DungeonMap, TravelMoney, Dawdlist } from '../projectMedia/projectMediaFiles'
 
 const Arrow = ({ direction, style, arrowClick }) => {
 
@@ -22,12 +14,18 @@ const Arrow = ({ direction, style, arrowClick }) => {
 }
 
 const ImageSlide = ({ image, website, icons }) => {
-
+  const [imageView, setImageView] = useState(image.static)
 
   return (
     <div className="imageSlide">
         <a className="websiteLink" rel="noreferrer" href={website} target="_blank" ariaLabel={`Path to ${website}, a project by Travis Draper`}>
-          <img alt="Project Slide" src={image} className="noselect img-fluid img" />
+          <img 
+            alt="Project Slide" 
+            src={imageView} 
+            className="noselect img-fluid img" 
+            onMouseEnter={() => setImageView(image.gif || image.static)}
+            onMouseLeave={() => setImageView(image.static)}
+          />
         </a>
         {icons 
           ? <div className="homeIconImages">
@@ -62,6 +60,9 @@ export const ImageBox = ({ images, website, icons=[], classname, children=null, 
 
   const handleRightArrowClick = () => {
     if(Math.abs(translate) >= (images.length-1)*100) {
+      carouselRef.current.style.transform = `translateX(0)`
+      setTranslate(0)
+      setCount(0)
       return
     }
     carouselRef.current.style.transform = `translateX(${translate - 100}%)`
@@ -70,6 +71,9 @@ export const ImageBox = ({ images, website, icons=[], classname, children=null, 
   }
   const handleLeftArrowClick = () => {
     if(Math.abs(translate) < 100) {
+      carouselRef.current.style.transform = `translateX(${(images.length-1)*-100}%)`
+      setTranslate((images.length-1)*-100)
+      setCount(images.length-1)
       return
     }
     carouselRef.current.style.transform = `translateX(${translate + 100}%)`
@@ -221,7 +225,22 @@ function ProjectList() {
   return (
     <>
     <Project
-      images={[DMLogin, DMDashboard, DMGameboard]}
+      images={
+        [
+          {
+            static: DungeonMap.login,
+            gif: DungeonMap.loginGif
+          }, 
+          {
+            static: DungeonMap.dashboard,
+            gif: DungeonMap.dashboardGif
+          },
+          {
+            static: DungeonMap.gameboard,
+            gif: DungeonMap.gameboardGif
+          }
+        ]
+      }
       text="A MERN fullstack application with user subscription and token authorization that integrates Socket.IO live data emission and draggable element UI to simulate a live DnD Dungeon Master board. All wrapped in that nostalgic wood-paneled visual to bring us back to DnD'ing in mom's basement." 
       textTitle={'Dungeon Map!'}
       reverse={false}
@@ -234,7 +253,20 @@ function ProjectList() {
       keywords={['MERN', 'NodeJs', 'Express', 'React', 'React-Router', 'React Hooks', 'Bootstrap', 'Socket.IO', 'Token Authentication', 'MongoDB', 'Mongoose', 'Image Scaling', 'Draggable Elements', 'Chat Functionality']}
     />
     <Project
-      images={[CurHome, CurDisplay, CurInfo]}
+      images={
+        [
+          {
+            static: TravelMoney.home,
+            gif: TravelMoney.masterGif
+          },
+          {
+            static: TravelMoney.input
+          },
+          {
+            static: TravelMoney.blurb
+          }
+        ]
+      }
       text='A React frontend web application that utilizes class components and React Router as well as integrates the Frankfurter currency data and Wikipedia APIs in order to deliver currency conversion data and travel information in a visually lightweight, airy build.'
       textTitle={'TravelMoney'}
       reverse={window.innerWidth > 1200 ? true : false}
@@ -246,7 +278,20 @@ function ProjectList() {
       keywords={['Frontend', 'React', 'React Legacy', 'React-Router', 'Bootstrap', 'API Requests', 'Wikipedia']}
     />
     <Project
-      images={[DawdHome, DawdActive, DawdComplete]}
+      images={
+        [
+          {
+            static: Dawdlist.home,
+            gif: Dawdlist.masterGif
+          },
+          {
+            static: Dawdlist.active
+          },
+          {
+            static: Dawdlist.complete
+          }
+        ]
+      }
       text='A JQuery-built fullstack project that incorporates Bootstrap and HTTP Polling to create a live data refresh to-do list.'
       textTitle={'Dawdlist'}
       reverse={false}
