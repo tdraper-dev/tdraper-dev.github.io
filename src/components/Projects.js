@@ -14,7 +14,7 @@ const Arrow = ({ direction, style, arrowClick }) => {
 }
 
 const ImageSlide = ({ image, website, icons }) => {
-  const [imageView, setImageView] = useState(image.static)
+  const [imageView, setImageView] = useState(image.static || image.gif)
 
   return (
     <div className="imageSlide">
@@ -24,7 +24,7 @@ const ImageSlide = ({ image, website, icons }) => {
             src={imageView} 
             className="noselect img-fluid img" 
             onMouseEnter={() => setImageView(image.gif || image.static)}
-            onMouseLeave={() => setImageView(image.static)}
+            onMouseLeave={() => setImageView(image.static || image.gif)}
           />
         </a>
         {icons 
@@ -238,6 +238,9 @@ function ProjectList() {
           {
             static: DungeonMap.gameboard,
             gif: DungeonMap.gameboardGif
+          },
+          {
+            gif: DungeonMap.masterGif
           }
         ]
       }
@@ -256,14 +259,16 @@ function ProjectList() {
       images={
         [
           {
-            static: TravelMoney.home,
-            gif: TravelMoney.masterGif
+            static: TravelMoney.home
           },
           {
             static: TravelMoney.input
           },
           {
             static: TravelMoney.blurb
+          },
+          {
+            gif: TravelMoney.masterGif
           }
         ]
       }
@@ -281,14 +286,16 @@ function ProjectList() {
       images={
         [
           {
-            static: Dawdlist.home,
-            gif: Dawdlist.masterGif
+            static: Dawdlist.home
           },
           {
             static: Dawdlist.active
           },
           {
             static: Dawdlist.complete
+          },
+          {
+            gif: Dawdlist.masterGif
           }
         ]
       }
