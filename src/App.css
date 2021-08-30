@@ -856,7 +856,7 @@ body {
   background-color: rgb(233, 128, 0);
   width: fit-content;
   padding: 10px;
-  border-radius: 25px;
+  border-radius: 5px;
   margin: 0 auto;
   margin-top: auto;
   margin-bottom: 15px;
@@ -1128,7 +1128,7 @@ body {
   font-size: 20px;
   width: fit-content;
   margin-top: auto;
-  border-radius: 30px;
+  border-radius: 5px;
   padding: 10px;
   font-weight: 500;
   font-family: Khula-Regular;
