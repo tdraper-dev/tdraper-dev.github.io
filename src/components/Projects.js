@@ -83,7 +83,7 @@ export const ImageBox = ({ images, website, icons=[], classname, children=null, 
 
   return (
     <>
-    <div className={classname} title="Click to see the site">
+    <div className={classname}>
         <Arrow
           arrowClick={handleLeftArrowClick}
           direction={<FaArrowAltCircleLeft color="white" />}
