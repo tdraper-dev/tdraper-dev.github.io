@@ -819,8 +819,12 @@ body {
 
 .websiteLink {
   text-decoration: none;
+  width: 100%;
 }
- 
+
+.gifDisplay {
+  width: 100%;
+}
 .arrowBox {
   position: absolute;
   display: flex;

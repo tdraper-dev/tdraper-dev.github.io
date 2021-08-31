@@ -18,7 +18,7 @@ const ImageSlide = ({ image, website, icons }) => {
 
   return (
     <div className="imageSlide">
-        <a className="websiteLink" rel="noreferrer" href={website} target="_blank" ariaLabel={`Path to ${website}, a project by Travis Draper`}>
+        <a className="websiteLink" rel="noreferrer" href={website} target="_blank" aria-label={`Path to ${website}, a project by Travis Draper`}>
           <img 
             alt="Project Slide" 
             src={imageView} 
@@ -92,7 +92,7 @@ export const ImageBox = ({ images, website, icons=[], classname, children=null, 
           <ImageCarousel icons={icons} website={website} images={images} ref={carouselRef} />
           {sourceCodes
             ?
-            <a title={`Source Code: ${sourceCodes[count]}`} rel="noreferrer" href={sourceCodes[count]} target="_blank" className="noLink" ariaLabel={`Path to ${sourceCodes[count]}, a project by Travis Draper}`}>
+            <a title={`Source Code: ${sourceCodes[count]}`} rel="noreferrer" href={sourceCodes[count]} target="_blank" className="noLink" aria-label={`Path to ${sourceCodes[count]}, a project by Travis Draper}`}>
               {children}
             </a>
             : null
@@ -136,7 +136,7 @@ const Button = ({ title, link, type }) => {
     {
       type === 'Link'
         ? 
-        <Link className="noLink" to={link} ariaLabel={`Path to a blog about making ${title}`}>
+        <Link className="noLink" to={link} aria-label={`Path to a blog about making ${title}`}>
           <div className="projectButton">
             {title}
           </div>
@@ -157,8 +157,8 @@ const ProjectButtons = ({ content }) => {
 
   return (
     <div className="projectButtonsRow">
-      {content.map(contents => {
-        return <Button title={contents.title} link={contents.link} type={contents.type} />
+      {content.map((contents, index) => {
+        return <Button key={index} title={contents.title} link={contents.link} type={contents.type} />
       })}
     </div>
   )

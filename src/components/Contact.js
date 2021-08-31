@@ -1,5 +1,4 @@
-import { valueToNode } from '@babel/types';
-import React, { useState, useRef } from 'react'
+import React, { useState } from 'react'
 import { useForm } from 'react-hook-form';
 import IconTitle from './IconTitle'
 import { init, sendForm } from 'emailjs-com'
@@ -11,7 +10,7 @@ export function ContactBox() {
 
   const { register, handleSubmit, formState: { errors } } = useForm();
 
-  const onSubmit = (data) => {
+  const onSubmit = () => {
     const form = document.getElementById('contactMeForm')
     const statusMessage = document.getElementById('statusMessage')
     generateContactNumber();
